@@ -1,6 +1,9 @@
 {
   "name": "react-flow-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "workspaces": [
+    "."
+  ],
   "description": "Manages internal state for a singular flow or multiple nested flows in React",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
