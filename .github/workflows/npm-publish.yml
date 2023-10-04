@@ -26,8 +26,6 @@ jobs:
           git config --global user.email "github-actions@github.com"
         shell: bash
       - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.KEY }}
       - uses: actions/setup-node@v3
         with:
           node-version: 19
