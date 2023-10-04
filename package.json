@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "publish-main": "lerna publish --yes"
+    "publish-main": "lerna publish --yes --force-git-tag"
   },
   "license": "LICENSE",
   "author": "Nicholas Panella",
