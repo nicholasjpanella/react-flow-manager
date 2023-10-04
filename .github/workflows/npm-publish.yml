@@ -20,10 +20,12 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Set up Git
+        shell: bash
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
+      - uses: actions/checkout@v3
         with:
           persist-credentials: false
       - uses: actions/setup-node@v3
