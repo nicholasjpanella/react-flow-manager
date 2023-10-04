@@ -37,4 +37,3 @@ jobs:
       - run: npm run publish-main
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - run: git push --force
