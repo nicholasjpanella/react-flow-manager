@@ -20,12 +20,10 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git
-        run: |
-          git config --global user.name "Publisher"
-          git config --global user.email "nickjpanella@gmail.com"
-        shell: bash
       - uses: actions/checkout@v3
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
         with:
           persist-credentials: false
       - uses: actions/setup-node@v3
