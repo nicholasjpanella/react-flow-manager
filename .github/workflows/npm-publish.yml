@@ -27,7 +27,7 @@ jobs:
         shell: bash
       - uses: actions/checkout@v3
         with:
-          persist-credentials: false
+          token: ${{ secrets.KEY }}
       - uses: actions/setup-node@v3
         with:
           node-version: 19
