@@ -27,14 +27,14 @@ jobs:
         shell: bash
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.BOT_TOKEN }}
+          ssh-key: ${{secrets.DEPLOY_KEY}}
       - uses: actions/setup-node@v3
         with:
           node-version: 19
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
-      - run: npm run publish-main
+      - run: npm run publish-main -- --force-git-tag --no-push
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - run: git push --force
